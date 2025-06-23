@@ -1,0 +1,37 @@
+To install the .NET SDK on Ubuntu, follow these steps based on your Ubuntu version. The steps below work for Ubuntu 20.04, 22.04, and later.
+
+✅ Step-by-Step: Install .NET SDK on Ubuntu
+1. Update System Packages
+
+#sudo apt update
+#sudo apt install -y wget apt-transport-https
+
+2. Add Microsoft Package Repository
+
+#wget https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/packages-microsoft-prod.deb
+#sudo dpkg -i packages-microsoft-prod.deb
+
+3. Install Required Packages
+
+#sudo apt update
+#sudo apt install -y dotnet-sdk-8.0
+
+You can also install specific versions like dotnet-sdk-7.0 or dotnet-sdk-6.0.
+
+4. Verify Installation
+
+#dotnet --version
+This should return something like 8.0.x.
+
+📦 Optional: Install ASP.NET Runtime or .NET Runtime only ASP.NET Core Runtime (for web apps):
+
+#sudo apt install -y aspnetcore-runtime-8.0
+
+.NET Runtime (no SDK):
+
+#sudo apt install -y dotnet-runtime-8.0
+
+🧹 Cleanup
+Once installed, you can remove the .deb file:
+
+#rm packages-microsoft-prod.deb
