@@ -1,9 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>DotnetDemoapp</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
 
-    <IsPackable>false</IsPackable>
+    <Version>1.5.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
